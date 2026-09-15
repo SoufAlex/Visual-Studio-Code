@@ -22,17 +22,19 @@ body {
 
 .site-header,
 main {
-    width: min(100% - 2rem, var(--page-width));
+    width: min(calc(100% - 2rem), var(--page-width));
     margin-inline: auto;
 }
 
+/* Banner: approximately 20% shorter and cropped from the bottom */
 .banner {
     display: block;
     width: 100%;
-    max-width: 100%;
-    height: auto;
+    height: clamp(150px, 25.6vw, 336px);
     margin-top: 1rem;
     border-radius: 0.5rem;
+    object-fit: cover;
+    object-position: center center;
 }
 
 h1 {
@@ -68,39 +70,45 @@ li {
     margin-bottom: 0.35rem;
 }
 
+/* Responsive gallery */
 .image-gallery {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
-    align-items: start;
 }
 
 .image-gallery img {
     display: block;
     width: 100%;
-    max-width: 100%;
-    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
     border-radius: 0.5rem;
 }
 
-/* Two images per row on medium screens */
+/* Two images per row */
 @media (max-width: 900px) {
     .image-gallery {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-/* One image per row on small screens */
+/* One image per row */
 @media (max-width: 600px) {
 
     .site-header,
     main {
-        width: min(100% - 1rem, var(--page-width));
+        width: min(calc(100% - 1rem), var(--page-width));
     }
 
     .banner {
-        margin-top: 0.5rem;
-        border-radius: 0.35rem;
+    display: block;
+    width: 100%;
+    height: clamp(150px, 25.6vw, 336px);
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    object-position: center center;
     }
 
     .image-gallery {
