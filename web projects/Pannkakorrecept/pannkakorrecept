@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ett enkelt recept på traditionella svenska pannkakor.">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Pannkaksrecept</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <img class="banner" src="images/Banner Pancake.jpg" alt="Pannkakor">
+
+        <h1>Enkelt recept på pannkakor</h1>
+    </header>
+
+    <main>
+        <section class="recipe" aria-labelledby="recipe-heading">
+            <h2 id="recipe-heading">
+                Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.
+            </h2>
+
+            <h3>Ingredienser:</h3>
+            <ul>
+                <li>För 4 portioner</li>
+                <li>2 1/2 dl vetemjöl</li>
+                <li>1/2 tsk salt</li>
+                <li>6 dl mjölk</li>
+                <li>3 ägg</li>
+                <li>Smör till stekning</li>
+                <li>Sylt, bär eller frukt till servering</li>
+            </ul>
+
+            <h3>Så här gör du:</h3>
+            <ol>
+                <li>Blanda mjöl och salt i en bunke.</li>
+                <li>Vispa i hälften av mjölken till en slät smet.</li>
+                <li>Vispa i resten av mjölken och äggen.</li>
+                <li>Låt smeten vila cirka 10 minuter.</li>
+                <li>Stek tunna pannkakor i lite smör.</li>
+                <li>Servera med sylt, bär eller frukt.</li>
+            </ol>
+        </section>
+
+        <section class="serving-suggestions" aria-labelledby="suggestions-heading">
+            <h2 id="suggestions-heading">Serveringsförslag</h2>
+
+            <div class="image-gallery">
+                <img src="images/serveringsförslag 1.jpg" alt="Pannkakor med serveringsförslag 1">
+                <img src="images/serveringsförslag 2.jpg" alt="Pannkakor med serveringsförslag 2">
+                <img src="images/serveringsförslag 3.jpg" alt="Pannkakor med serveringsförslag 3">
+                <img src="images/serveringsförslag 4.jpg" alt="Pannkakor med serveringsförslag 4">
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
