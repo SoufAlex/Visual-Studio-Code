@@ -481,25 +481,31 @@
       <h2 class="fluid-h2 font-display tracking-wide text-ink">Education</h2>
       <span class="block w-10 h-[3px] bg-black mt-3"></span>
     </div>
-    <p class="font-mono text-xs text-[#8A8577]">Send diploma photos and I'll drop them into the frames below</p>
   </div>
 
-  <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
     <div class="border border-[#2B2A26]/15 p-5">
-      <div class="diploma-slot border border-dashed border-[#2B2A26]/25 aspect-[4/3] flex flex-col items-center justify-center text-center gap-2 mb-4">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8A8577" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M8 15l3-3 2 2 3-4"/></svg>
-        <p class="font-mono text-[11px] text-[#8A8577] px-4">Diploma image goes here</p>
+      <div class="aspect-[4/3] overflow-hidden mb-4">
+        <img src="Degrees/paris13-diploma.jpg" alt="Université Paris 13 Sorbonne-Condorcet diploma" class="w-full h-full object-cover">
       </div>
       <p class="font-mono text-xs uppercase tracking-widest text-amberdim">2006 — 2011 · Paris, France</p>
       <h3 class="mt-1 font-display text-xl tracking-wide">Université Paris 13 Sorbonne‑Condorcet</h3>
       <p class="text-sm text-[#4A473F] mt-1">BA, Marketing &amp; Economics, Communication &amp; Behavioral Psychology</p>
     </div>
 
+   <div class="border border-[#2B2A26]/15 p-5">
+   <div class="aspect-[4/3] overflow-hidden mb-4">
+    <img src="Degrees/uttlatande-Uni-Paris-XIII-Sorbonne-Condorcet_.jpg" alt="Swedish credential recognition statement for the Université Paris XIII Sorbonne-Condorcet degree" class="w-full h-full object-cover">
+  </div>
+  <p class="font-mono text-xs uppercase tracking-widest text-amberdim">Sweden</p>
+  <h3 class="mt-1 font-display text-xl tracking-wide">UHR — Utlåtande</h3>
+  <p class="text-sm text-[#4A473F] mt-1">Foreign credential recognition statement for the Université Paris XIII Sorbonne‑Condorcet degree</p>
+   </div>
+
     <div class="border border-[#2B2A26]/15 p-5">
-      <div class="diploma-slot border border-dashed border-[#2B2A26]/25 aspect-[4/3] flex flex-col items-center justify-center text-center gap-2 mb-4">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8A8577" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M8 15l3-3 2 2 3-4"/></svg>
-        <p class="font-mono text-[11px] text-[#8A8577] px-4">Diploma image goes here</p>
+      <div class="aspect-[4/3] overflow-hidden mb-4">
+        <img src="Degrees/jensen-yh-diploma.jpg" alt="IT Project Management diploma" class="w-full h-full object-cover">
       </div>
       <p class="font-mono text-xs uppercase tracking-widest text-amberdim">2013 — 2014 · Stockholm, Sweden</p>
       <h3 class="mt-1 font-display text-xl tracking-wide">JENSEN Yrkeshögskola</h3>
@@ -507,9 +513,8 @@
     </div>
 
     <div class="border border-[#2B2A26]/15 p-5">
-      <div class="diploma-slot border border-dashed border-[#2B2A26]/25 aspect-[4/3] flex flex-col items-center justify-center text-center gap-2 mb-4">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8A8577" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M8 15l3-3 2 2 3-4"/></svg>
-        <p class="font-mono text-[11px] text-[#8A8577] px-4">Diploma image goes here</p>
+      <div class="aspect-[4/3] overflow-hidden mb-4">
+        <img src="Degrees/lyautey-bac.jpg" alt="Baccalauréat" class="w-full h-full object-cover">
       </div>
       <p class="font-mono text-xs uppercase tracking-widest text-amberdim">2000 — 2003</p>
       <h3 class="mt-1 font-display text-xl tracking-wide">Lycée Lyautey, Casablanca</h3>
@@ -518,7 +523,6 @@
 
   </div>
 </section>
-
 <!-- ============ LANGUAGES + CERTIFICATIONS ============ -->
 <section id="languages" class="bg-ink2 text-[#EDE9DE] py-16 px-6">
   <div class="max-w-5xl mx-auto grid md:grid-cols-5 gap-12">

@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S Alexander Essafi — Digital Marketing Manager &amp; Project Manager</title>
+<meta name="description" content="Resume of S Alexander Essafi, Digital Marketing Manager (CDMM) and Project Manager based in Stockholm.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0E141F',
+          ink2: '#161E2C',
+          paper: '#EFEDE4',
+          amber: '#FFB020',
+          amberdim: '#8A6420',
+          ruby: '#FF5C5C',
+          cobalt: '#5B8DEF',
+          orchid: '#E85FC0',
+          khaki: '#B7B36B',
+        },
+        fontFamily: {
+          display: ['"Bebas Neue"', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+          mono: ['"IBM Plex Mono"', 'monospace'],
+        },
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; }
+
+  .fluid-h1 { font-size: clamp(2.75rem, 11vw, 8rem); line-height: 0.87; }
+  .fluid-h2 { font-size: clamp(1.75rem, 4.2vw, 2.75rem); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-rise {
+      opacity: 0;
+      transform: translateY(14px);
+      animation: rise 0.9s cubic-bezier(.22,.68,.36,1) forwards;
+    }
+    .hero-rise.d1 { animation-delay: .05s; }
+    .hero-rise.d2 { animation-delay: .18s; }
+    .hero-rise.d3 { animation-delay: .30s; }
+    .hero-rise.d4 { animation-delay: .42s; }
+    @keyframes rise {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .7s cubic-bezier(.22,.68,.36,1), transform .7s cubic-bezier(.22,.68,.36,1);
+    }
+    .reveal-on-scroll.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal-on-scroll { opacity: 1; transform: none; }
+  }
+
+  /* animated digital symbols for the skills section */
+  .icon-draw path,
+  .icon-draw circle {
+    stroke-dasharray: 220;
+    stroke-dashoffset: 220;
+    transition: stroke-dashoffset 1.1s cubic-bezier(.22,.68,.36,1) .15s;
+  }
+  .reveal-on-scroll.revealed .icon-draw path,
+  .reveal-on-scroll.revealed .icon-draw circle {
+    stroke-dashoffset: 0;
+  }
+  .icon-bar {
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform .7s cubic-bezier(.22,.68,.36,1) var(--bar-delay, 0s);
+  }
+  .reveal-on-scroll.revealed .icon-bar {
+    transform: scaleY(1);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .icon-draw path, .icon-draw circle { stroke-dashoffset: 0; transition: none; }
+    .icon-bar { transform: scaleY(1); transition: none; }
+  }
+
+  .diploma-slot {
+    background-image: repeating-linear-gradient(45deg, rgba(43,42,38,0.09) 0, rgba(43,42,38,0.09) 1px, transparent 1px, transparent 10px);
+  }
+
+  ::selection { background: #FFB020; color: #0E141F; }
+
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid #FFB020;
+    outline-offset: 3px;
+  }
+
+  /* academic underline-on-focus form fields */
+  .form-field { position: relative; }
+  .form-field input,
+  .form-field textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(237,233,222,0.25);
+    color: #EDE9DE;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    padding: 0.6rem 0.1rem;
+    outline: none;
+  }
+  .form-field textarea { resize: vertical; min-height: 6rem; }
+  .form-field input::placeholder,
+  .form-field textarea::placeholder { color: #6B6759; }
+  .form-underline {
+    position: absolute;
+    left: 0; bottom: 0;
+    height: 2px; width: 0;
+    background: #FFB020;
+    transition: width .35s cubic-bezier(.22,.68,.36,1);
+  }
+  .form-field input:focus ~ .form-underline,
+  .form-field textarea:focus ~ .form-underline { width: 100%; }
+</style>
+</head>
+
+<body class="bg-paper text-[#2B2A26] antialiased overflow-x-hidden">
+
+<!-- ============ NAV ============ -->
+<nav class="fixed top-0 inset-x-0 z-50 bg-ink/95 backdrop-blur border-b border-white/10">
+  <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+    <a href="#top" class="font-display text-2xl tracking-wide text-[#EDE9DE] leading-none">S.A. ESSAFI</a>
+    <div class="hidden sm:flex items-center gap-6 font-mono text-xs uppercase tracking-widest text-[#B9B4A6]">
+      <a href="#experience" class="hover:text-amber transition-colors">Experience</a>
+      <a href="#education" class="hover:text-amber transition-colors">Education</a>
+      <a href="#skills" class="hover:text-amber transition-colors">Skills</a>
+      <a href="#recommendations" class="hover:text-amber transition-colors">Recommendations</a>
+      <a href="#contact" class="hover:text-amber transition-colors">Contact</a>
+    </div>
+    <a href="#contact" class="font-mono text-xs uppercase tracking-widest border border-amber/60 text-amber px-3 py-1.5 hover:bg-amber hover:text-ink transition-colors">Get in touch</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="top" class="relative bg-ink text-[#EDE9DE] pt-32 pb-16 px-6 border-b border-white/10 overflow-hidden">
+
+  <!-- abstract mathematical / digital-marketing motif, purely decorative -->
+  <div class="hidden md:block absolute top-0 right-0 w-[46%] h-full opacity-40 pointer-events-none" aria-hidden="true">
+    <svg viewBox="0 0 600 600" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="dotgrid" width="30" height="30" patternUnits="userSpaceOnUse">
+          <circle cx="2" cy="2" r="1.2" fill="#B7B36B"/>
+        </pattern>
+      </defs>
+      <rect x="0" y="0" width="600" height="600" fill="url(#dotgrid)" opacity="0.4"/>
+
+      <!-- ascending performance line -->
+      <polyline points="20,470 110,430 190,450 270,360 350,320 430,210 560,110" fill="none" stroke="#5B8DEF" stroke-width="2" opacity="0.75"/>
+      <circle cx="110" cy="430" r="4" fill="#5B8DEF"/>
+      <circle cx="270" cy="360" r="4" fill="#5B8DEF"/>
+      <circle cx="430" cy="210" r="4" fill="#5B8DEF"/>
+      <circle cx="560" cy="110" r="4" fill="#5B8DEF"/>
+
+      <!-- conversion funnel -->
+      <g fill="none" stroke="#E85FC0" stroke-width="1.5" opacity="0.75">
+        <path d="M370 40 L560 40 L505 100 L425 100 Z"/>
+        <path d="M425 100 L505 100 L475 145 L455 145 Z"/>
+        <path d="M455 145 L475 145 L466 175 L464 175 Z"/>
+      </g>
+
+      <!-- audience network nodes -->
+      <g opacity="0.8">
+        <line x1="70" y1="230" x2="175" y2="190" stroke="#B7B36B" stroke-width="1"/>
+        <line x1="175" y1="190" x2="150" y2="300" stroke="#B7B36B" stroke-width="1"/>
+        <line x1="70" y1="230" x2="150" y2="300" stroke="#B7B36B" stroke-width="1"/>
+        <line x1="150" y1="300" x2="255" y2="330" stroke="#B7B36B" stroke-width="1"/>
+        <circle cx="70" cy="230" r="5" fill="#FF5C5C"/>
+        <circle cx="175" cy="190" r="5" fill="#FF5C5C"/>
+        <circle cx="150" cy="300" r="5" fill="#FF5C5C"/>
+        <circle cx="255" cy="330" r="5" fill="#FF5C5C"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="relative max-w-5xl mx-auto">
+    <p class="hero-rise d1 font-mono text-xs uppercase tracking-[0.25em] text-amber mb-4">Digital Marketing &amp; Project Management</p>
+    <h1 class="hero-rise d2 fluid-h1 font-display tracking-wide">
+      S Alexander<br>Essafi
+    </h1>
+    <p class="hero-rise d3 mt-6 max-w-2xl text-lg text-[#C9C4B6] leading-relaxed">
+      IT project manager and digital marketing specialist with a decade of running performance‑marketing operations and Agile delivery teams across the Nordics and Europe.
+    </p>
+
+    <div class="hero-rise d4 mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 font-mono text-sm text-[#C9C4B6]">
+      <span class="flex items-center gap-2">
+        <span class="w-1.5 h-1.5 bg-amber rounded-full"></span>
+        Greater Stockholm, Sweden
+      </span>
+      <a href="mailto:s.essafi@gmail.com" class="border-l border-white/15 pl-6 hover:text-amber transition-colors">s.essafi@gmail.com</a>
+      <a href="https://www.linkedin.com/in/alexander-essafi" target="_blank" rel="noopener" class="border-l border-white/15 pl-6 hover:text-amber transition-colors">LinkedIn ↗</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ STAT BAND ============ -->
+<section class="bg-ink2 text-[#EDE9DE] border-b border-white/10">
+  <div class="max-w-5xl mx-auto px-6 py-10 grid grid-cols-2 sm:grid-cols-4 gap-8">
+    <div>
+      <p class="font-mono text-4xl sm:text-5xl text-ruby">12+</p>
+      <p class="mt-1 text-xs uppercase tracking-widest text-[#9A9585]">Years in marketing &amp; IT delivery</p>
+    </div>
+    <div>
+      <p class="font-mono text-4xl sm:text-5xl text-cobalt">300%</p>
+      <p class="mt-1 text-xs uppercase tracking-widest text-[#9A9585]">Driver growth delivered at Heetch</p>
+    </div>
+    <div>
+      <p class="font-mono text-4xl sm:text-5xl text-orchid">12</p>
+      <p class="mt-1 text-xs uppercase tracking-widest text-[#9A9585]">Consulting clients served</p>
+    </div>
+    <div>
+      <p class="font-mono text-4xl sm:text-5xl text-khaki">6</p>
+      <p class="mt-1 text-xs uppercase tracking-widest text-[#9A9585]">Languages spoken</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-5 gap-10">
+  <div class="md:col-span-3">
+    <h2 class="fluid-h2 font-display tracking-wide text-ink">About</h2>
+    <span class="block w-10 h-[3px] bg-black mt-3 mb-1"></span>
+    <p class="mt-4 text-[15px] leading-relaxed text-[#4A473F]">
+      BA in Economics and Marketing from Université Paris XIII Sorbonne–Condorcet, with certifications in PRINCE2, SCRUM, and IT Project Management. I bring a strong academic foundation to Agile leadership — driving continuous improvement, adaptive delivery, and a high‑performing team culture across every engagement.
+    </p>
+    <p class="mt-4 text-[15px] leading-relaxed text-[#4A473F]">
+      Known for strategic clarity, analytical creativity, and a collaborative leadership style, with a track record spanning performance‑marketing frameworks, conversion optimization, and data‑driven decision‑making.
+    </p>
+  </div>
+  <div class="md:col-span-2">
+    <h3 class="font-mono text-xs uppercase tracking-widest text-amberdim">Snapshot</h3>
+    <div class="mt-3 flex flex-wrap gap-2">
+      <span class="border border-[#2B2A26]/15 px-3 py-1 text-sm">Strategic planning</span>
+      <span class="border border-[#2B2A26]/15 px-3 py-1 text-sm">Digital marketing</span>
+      <span class="border border-[#2B2A26]/15 px-3 py-1 text-sm">Conversion optimization</span>
+      <span class="border border-[#2B2A26]/15 px-3 py-1 text-sm">Data‑driven decisions</span>
+      <span class="border border-[#2B2A26]/15 px-3 py-1 text-sm">Agile / SCRUM</span>
+      <span class="border border-[#2B2A26]/15 px-3 py-1 text-sm">PRINCE2</span>
+      <span class="border border-[#2B2A26]/15 px-3 py-1 text-sm">Paid social</span>
+      <span class="border border-[#2B2A26]/15 px-3 py-1 text-sm">SEO &amp; UX</span>
+      <span class="border border-[#2B2A26]/15 px-3 py-1 text-sm">Attribution &amp; analytics</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="bg-ink text-[#EDE9DE] py-16 px-6">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="fluid-h2 font-display tracking-wide">Experience</h2>
+    <span class="block w-10 h-[3px] bg-amber mt-3"></span>
+
+    <div class="mt-10 space-y-2">
+
+      <div class="flex gap-5 sm:gap-6">
+        <div class="flex flex-col items-center w-2.5 shrink-0 pt-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber shrink-0"></span>
+          <span class="w-px flex-1 bg-white/15 mt-2"></span>
+        </div>
+        <div class="flex-1 min-w-0 pb-8">
+          <p class="font-mono text-xs uppercase tracking-widest text-amber">Apr 2025 — Nov 2025</p>
+          <h3 class="mt-1 font-display text-2xl tracking-wide">Senior Digital Marketing Specialist</h3>
+          <p class="text-sm text-[#9A9585]">WidenMarketing AB · Remote, Stockholm</p>
+          <ul class="mt-3 space-y-1.5 text-[15px] text-[#C9C4B6] leading-relaxed list-disc list-outside ml-4">
+            <li>Directed cross‑platform paid media across Meta, TikTok, Snapchat, LinkedIn, Pinterest and Reddit using behavioral insights and forecasting models.</li>
+            <li>Built performance frameworks grounded in statistical analysis and attribution logic to guide budget allocation and bidding.</li>
+            <li>Ran structured A/B and multivariate testing to lift CTR, conversion efficiency, ROI and ROAS across audience groups.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex gap-5 sm:gap-6">
+        <div class="flex flex-col items-center w-2.5 shrink-0 pt-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber shrink-0"></span>
+          <span class="w-px flex-1 bg-white/15 mt-2"></span>
+        </div>
+        <div class="flex-1 min-w-0 pb-8">
+          <p class="font-mono text-xs uppercase tracking-widest text-amber">Feb 2022 — Feb 2026</p>
+          <h3 class="mt-1 font-display text-2xl tracking-wide">Independent Digital Marketing Consultant</h3>
+          <p class="text-sm text-[#9A9585]">Monkey Labs · Solo practice, Remote</p>
+          <p class="mt-2 text-xs text-[#8A8577] italic">Run independently alongside full‑time roles, taking on clients directly outside normal working hours.</p>
+          <ul class="mt-3 space-y-1.5 text-[15px] text-[#C9C4B6] leading-relaxed list-disc list-outside ml-4">
+            <li>Led full‑funnel digital strategy and brand positioning for a multi‑client portfolio, solo end to end.</li>
+            <li>Managed e‑commerce storefronts, product lifecycles and conversion performance for each client directly.</li>
+            <li>Implemented tracking and analytics systems, and mentored junior marketers brought in on select projects.</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="font-mono text-[11px] border border-white/15 text-[#9A9585] px-2 py-1">Moment Tattoo &amp; Body Art</span>
+            <span class="font-mono text-[11px] border border-white/15 text-[#9A9585] px-2 py-1">ZoCom AB</span>
+            <span class="font-mono text-[11px] border border-white/15 text-[#9A9585] px-2 py-1">T14Marketing</span>
+            <span class="font-mono text-[11px] border border-white/15 text-[#9A9585] px-2 py-1">TRIB3</span>
+            <span class="font-mono text-[11px] border border-white/15 text-[#9A9585] px-2 py-1">BuyAndBorrowMusic</span>
+            <span class="font-mono text-[11px] border border-white/15 text-[#9A9585] px-2 py-1">Ucation</span>
+            <span class="font-mono text-[11px] border border-white/15 text-[#9A9585] px-2 py-1">Ali Campbell NLP</span>
+            <span class="font-mono text-[11px] border border-white/15 text-[#9A9585] px-2 py-1">Amanda Hamilton Nutrition</span>
+            <span class="font-mono text-[11px] border border-white/15 text-[#9A9585] px-2 py-1">Richard Knight Tarot &amp; Hypnosis</span>
+            <span class="font-mono text-[11px] border border-white/15 text-[#9A9585] px-2 py-1">Ulanzi</span>
+            <span class="font-mono text-[11px] border border-white/15 text-[#9A9585] px-2 py-1">Zuri Furniture</span>
+            <span class="font-mono text-[11px] border border-white/15 text-[#9A9585] px-2 py-1">Portugal Restaurants</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap-5 sm:gap-6">
+        <div class="flex flex-col items-center w-2.5 shrink-0 pt-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber shrink-0"></span>
+          <span class="w-px flex-1 bg-white/15 mt-2"></span>
+        </div>
+        <div class="flex-1 min-w-0 pb-8">
+          <p class="font-mono text-xs uppercase tracking-widest text-amber">Apr 2022 — Aug 2022</p>
+          <h3 class="mt-1 font-display text-2xl tracking-wide">Head of Digital Marketing</h3>
+          <p class="text-sm text-[#9A9585]">Esther's · Stockholm</p>
+          <ul class="mt-3 space-y-1.5 text-[15px] text-[#C9C4B6] leading-relaxed list-disc list-outside ml-4">
+            <li>Developed and executed organization‑wide digital strategy aligned to long‑term growth priorities.</li>
+            <li>Owned digital marketing budgets and led the digital team through structured feedback and coaching.</li>
+            <li>Directed content strategy and oversaw website, UX and digital asset performance.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex gap-5 sm:gap-6">
+        <div class="flex flex-col items-center w-2.5 shrink-0 pt-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber shrink-0"></span>
+          <span class="w-px flex-1 bg-white/15 mt-2"></span>
+        </div>
+        <div class="flex-1 min-w-0 pb-8">
+          <p class="font-mono text-xs uppercase tracking-widest text-amber">Nov 2019 — Dec 2022</p>
+          <h3 class="mt-1 font-display text-2xl tracking-wide">Chief Digital Marketing Manager (CDMM)</h3>
+          <p class="text-sm text-[#9A9585]">Gavagai AI · Stockholm</p>
+          <ul class="mt-3 space-y-1.5 text-[15px] text-[#C9C4B6] leading-relaxed list-disc list-outside ml-4">
+            <li>Led Gavagai's full digital marketing strategy across paid, organic and brand‑building initiatives.</li>
+            <li>Directed SEO and UX improvements across the Gavagai Explorer and Closer products.</li>
+            <li>Built the performance‑marketing roadmap and owned CAC optimization across channels.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex gap-5 sm:gap-6">
+        <div class="flex flex-col items-center w-2.5 shrink-0 pt-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber shrink-0"></span>
+          <span class="w-px flex-1 bg-white/15 mt-2"></span>
+        </div>
+        <div class="flex-1 min-w-0 pb-8">
+          <p class="font-mono text-xs uppercase tracking-widest text-amber">Apr 2017 — Apr 2020</p>
+          <h3 class="mt-1 font-display text-2xl tracking-wide">Marketing Manager / Project Manager / Teacher Consultant</h3>
+          <p class="text-sm text-[#9A9585]">ZoCom AB / Axcrypt AB · Stockholm</p>
+          <ul class="mt-3 space-y-1.5 text-[15px] text-[#C9C4B6] leading-relaxed list-disc list-outside ml-4">
+            <li>Led end‑to‑end IT projects using Agile and structured project frameworks.</li>
+            <li>Taught IT Project Management at Swedish polytechnic schools, covering Agile, SCRUM and PRINCE2.</li>
+            <li>Produced technical documentation and workflows supporting long‑term system stability.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex gap-5 sm:gap-6">
+        <div class="flex flex-col items-center w-2.5 shrink-0 pt-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber shrink-0"></span>
+          <span class="w-px flex-1 bg-white/15 mt-2"></span>
+        </div>
+        <div class="flex-1 min-w-0 pb-8">
+          <p class="font-mono text-xs uppercase tracking-widest text-amber">Apr 2018 — Nov 2018</p>
+          <h3 class="mt-1 font-display text-2xl tracking-wide">Senior Online Marketing Specialist</h3>
+          <p class="text-sm text-[#9A9585]">Genuin Sverige AB · Stockholm</p>
+          <ul class="mt-3 space-y-1.5 text-[15px] text-[#C9C4B6] leading-relaxed list-disc list-outside ml-4">
+            <li>Led performance marketing across key channels with data‑driven, funnel‑aligned strategy.</li>
+            <li>Managed paid social on Facebook, Instagram and LinkedIn with structured testing.</li>
+            <li>Designed creative assets in Photoshop and Adobe Spark and mentored performance‑marketing staff.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex gap-5 sm:gap-6">
+        <div class="flex flex-col items-center w-2.5 shrink-0 pt-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber shrink-0"></span>
+          <span class="w-px flex-1 bg-white/15 mt-2"></span>
+        </div>
+        <div class="flex-1 min-w-0 pb-8">
+          <p class="font-mono text-xs uppercase tracking-widest text-amber">Aug 2017 — Oct 2017</p>
+          <h3 class="mt-1 font-display text-2xl tracking-wide">Head of Digital Marketing / Nordic Team Lead</h3>
+          <p class="text-sm text-[#9A9585]">Samsung Electronics Nordic · Stockholm</p>
+          <ul class="mt-3 space-y-1.5 text-[15px] text-[#C9C4B6] leading-relaxed list-disc list-outside ml-4">
+            <li>Led cross‑channel operations spanning Bought Media, Social, DotCom, CRM and audience data.</li>
+            <li>Worked hands‑on in Adobe Marketing Cloud (AEM, Audience/DMP, Target) for personalization.</li>
+            <li>Held agency contracts and budget responsibility for digital initiatives across Nordic markets.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex gap-5 sm:gap-6">
+        <div class="flex flex-col items-center w-2.5 shrink-0 pt-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber shrink-0"></span>
+          <span class="w-px flex-1 bg-white/15 mt-2"></span>
+        </div>
+        <div class="flex-1 min-w-0 pb-8">
+          <p class="font-mono text-xs uppercase tracking-widest text-amber">Mar 2017 — Sep 2017</p>
+          <h3 class="mt-1 font-display text-2xl tracking-wide">Chief Digital Marketing Manager — Consultant</h3>
+          <p class="text-sm text-[#9A9585]">Heetch · Stockholm</p>
+          <ul class="mt-3 space-y-1.5 text-[15px] text-[#C9C4B6] leading-relaxed list-disc list-outside ml-4">
+            <li>Built and executed Heetch's social strategy through competitive analysis and audience segmentation.</li>
+            <li>Delivered 300% growth in active drivers through optimized acquisition funnels.</li>
+            <li>Adapted strategy to major regulatory shifts in Sweden's P2P transport and taxi‑licensing laws.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex gap-5 sm:gap-6">
+        <div class="flex flex-col items-center w-2.5 shrink-0 pt-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber shrink-0"></span>
+          <span class="w-px flex-1 bg-white/15 mt-2"></span>
+        </div>
+        <div class="flex-1 min-w-0 pb-8">
+          <p class="font-mono text-xs uppercase tracking-widest text-amber">Oct 2015 — Sep 2016</p>
+          <h3 class="mt-1 font-display text-2xl tracking-wide">Sales &amp; Marketing Expert — Facebook &amp; Instagram</h3>
+          <p class="text-sm text-[#9A9585]">Facebook Advertising · Lisbon Area</p>
+          <ul class="mt-3 space-y-1.5 text-[15px] text-[#C9C4B6] leading-relaxed list-disc list-outside ml-4">
+            <li>Built paid social strategy for a multilingual, multicultural SMB client portfolio.</li>
+            <li>Delivered 148% BOB profit in the final quarter through optimized funnels and targeted communication.</li>
+            <li>Contributed to the Facebook SMB project, identifying trends and scalable operational improvements.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex gap-5 sm:gap-6">
+        <div class="flex flex-col items-center w-2.5 shrink-0 pt-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber shrink-0"></span>
+          <span class="w-px flex-1 bg-white/15 mt-2"></span>
+        </div>
+        <div class="flex-1 min-w-0 pb-8">
+          <p class="font-mono text-xs uppercase tracking-widest text-amber">Apr 2014 — Jan 2015</p>
+          <h3 class="mt-1 font-display text-2xl tracking-wide">IT Project Manager / Account Manager / Office Manager</h3>
+          <p class="text-sm text-[#9A9585]">ZoCom AB · Sweden</p>
+          <ul class="mt-3 space-y-1.5 text-[15px] text-[#C9C4B6] leading-relaxed list-disc list-outside ml-4">
+            <li>Led digital and IT projects end‑to‑end, from scoping through delivery.</li>
+            <li>Managed a portfolio of client accounts and led IT teachers and course coordination.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex gap-5 sm:gap-6">
+        <div class="flex flex-col items-center w-2.5 shrink-0 pt-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber shrink-0"></span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <p class="font-mono text-xs uppercase tracking-widest text-amber">Dec 2013 — Dec 2014</p>
+          <h3 class="mt-1 font-display text-2xl tracking-wide">Back Office Administrator / Project Administrator</h3>
+          <p class="text-sm text-[#9A9585]">JENSEN Education · Stockholm</p>
+          <ul class="mt-3 space-y-1.5 text-[15px] text-[#C9C4B6] leading-relaxed list-disc list-outside ml-4">
+            <li>Managed internal back‑office operations, data systems and cross‑team coordination.</li>
+            <li>Delivered internal customer service and resolved operational issues for staff and stakeholders.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section id="education" class="max-w-5xl mx-auto px-6 py-16">
+  <div class="flex items-baseline justify-between gap-4 flex-wrap">
+    <div>
+      <h2 class="fluid-h2 font-display tracking-wide text-ink">Education</h2>
+      <span class="block w-10 h-[3px] bg-black mt-3"></span>
+    </div>
+  </div>
+
+  <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <div class="border border-[#2B2A26]/15 p-5">
+      <div class="aspect-[4/3] overflow-hidden mb-4">
+        <img src="Degrees/paris13-diploma.jpg" alt="Université Paris 13 Sorbonne-Condorcet diploma" class="w-full h-full object-cover">
+      </div>
+      <p class="font-mono text-xs uppercase tracking-widest text-amberdim">2006 — 2011 · Paris, France</p>
+      <h3 class="mt-1 font-display text-xl tracking-wide">Université Paris 13 Sorbonne‑Condorcet</h3>
+      <p class="text-sm text-[#4A473F] mt-1">BA, Marketing &amp; Economics, Communication &amp; Behavioral Psychology</p>
+    </div>
+
+   <div class="border border-[#2B2A26]/15 p-5">
+   <div class="aspect-[4/3] overflow-hidden mb-4">
+    <img src="Degrees/uttlatande-Uni-Paris-XIII-Sorbonne-Condorcet_.jpg" alt="Swedish credential recognition statement for the Université Paris XIII Sorbonne-Condorcet degree" class="w-full h-full object-cover">
+  </div>
+  <p class="font-mono text-xs uppercase tracking-widest text-amberdim">Sweden</p>
+  <h3 class="mt-1 font-display text-xl tracking-wide">UHR — Utlåtande</h3>
+  <p class="text-sm text-[#4A473F] mt-1">Foreign credential recognition statement for the Université Paris XIII Sorbonne‑Condorcet degree</p>
+   </div>
+
+    <div class="border border-[#2B2A26]/15 p-5">
+      <div class="aspect-[4/3] overflow-hidden mb-4">
+        <img src="Degrees/jensen-yh-diploma.jpg" alt="IT Project Management diploma" class="w-full h-full object-cover">
+      </div>
+      <p class="font-mono text-xs uppercase tracking-widest text-amberdim">2013 — 2014 · Stockholm, Sweden</p>
+      <h3 class="mt-1 font-display text-xl tracking-wide">JENSEN Yrkeshögskola</h3>
+      <p class="text-sm text-[#4A473F] mt-1">YH Diploma, IT‑Project Management · SCRUM &amp; PRINCE2 certified</p>
+    </div>
+
+    <div class="border border-[#2B2A26]/15 p-5">
+      <div class="aspect-[4/3] overflow-hidden mb-4">
+        <img src="Degrees/lyautey-bac.jpg" alt="Baccalauréat" class="w-full h-full object-cover">
+      </div>
+      <p class="font-mono text-xs uppercase tracking-widest text-amberdim">2000 — 2003</p>
+      <h3 class="mt-1 font-display text-xl tracking-wide">Lycée Lyautey, Casablanca</h3>
+      <p class="text-sm text-[#4A473F] mt-1">Baccalauréat, Business &amp; Managerial Economics</p>
+    </div>
+
+  </div>
+</section>
+<!-- ============ LANGUAGES + CERTIFICATIONS ============ -->
+<section id="languages" class="bg-ink2 text-[#EDE9DE] py-16 px-6">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-5 gap-12">
+
+    <div class="md:col-span-2">
+      <h2 class="text-3xl font-display tracking-wide">Languages</h2>
+      <div class="mt-6 space-y-4">
+        <div>
+          <div class="flex justify-between font-mono text-xs mb-1"><span>Arabic</span><span class="text-amber">Fluent</span></div>
+          <div class="h-1.5 bg-white/10"><div class="h-1.5 bg-amber" style="width:100%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between font-mono text-xs mb-1"><span>Swedish</span><span class="text-amber">Fluent</span></div>
+          <div class="h-1.5 bg-white/10"><div class="h-1.5 bg-amber" style="width:100%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between font-mono text-xs mb-1"><span>English</span><span class="text-amber">Fluent</span></div>
+          <div class="h-1.5 bg-white/10"><div class="h-1.5 bg-amber" style="width:100%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between font-mono text-xs mb-1"><span>Darija</span><span class="text-amber">Fluent</span></div>
+          <div class="h-1.5 bg-white/10"><div class="h-1.5 bg-amber" style="width:100%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between font-mono text-xs mb-1"><span>French</span><span class="text-amber">Fluent</span></div>
+          <div class="h-1.5 bg-white/10"><div class="h-1.5 bg-amber" style="width:100%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between font-mono text-xs mb-1"><span>Spanish</span><span class="text-[#9A9585]">Basic</span></div>
+          <div class="h-1.5 bg-white/10"><div class="h-1.5 bg-amber" style="width:35%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="md:col-span-3">
+      <h2 class="text-3xl font-display tracking-wide">Certifications &amp; awards</h2>
+      <ul class="mt-6 space-y-3 text-[15px] text-[#C9C4B6] leading-relaxed">
+        <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-ruby shrink-0"></span> Certified Scrum Master and PRINCE2 Practitioner</li>
+        <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-khaki shrink-0"></span> UEFA C License football coach, progressing to UEFA B License in 2027</li>
+        <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-amber shrink-0"></span> Developer &amp; senior coach, Bele Barkarby Women's Senior Team (Division 2)</li>
+        <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-ruby shrink-0"></span> Guest lecturer on digital marketing &amp; project management at Swedish polytechnic schools</li>
+        <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-cobalt shrink-0"></span> St. Erik's Cup Junior Champion, Sweden</li>
+        <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-orchid shrink-0"></span> C.E.V.U and F.S.D.I.E elected representative, France</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="max-w-5xl mx-auto px-6 py-16">
+  <h2 class="fluid-h2 font-display tracking-wide text-ink">Areas of expertise</h2>
+  <span class="block w-10 h-[3px] bg-black mt-3"></span>
+  <p class="mt-4 max-w-2xl text-[15px] text-[#4A473F] leading-relaxed">
+    The skills, tools and platforms behind a decade of campaigns, product launches and delivery teams.
+  </p>
+
+  <div class="mt-10 space-y-5">
+
+    <!-- STRATEGY -->
+    <div class="reveal-on-scroll border border-[#2B2A26]/15 p-6 sm:p-8 grid sm:grid-cols-[4.5rem_1fr] gap-5 sm:gap-8" style="transition-delay:.03s">
+      <div class="icon-draw text-ruby">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="18" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="22" cy="22" r="11" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="22" cy="22" r="3.2" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="font-display text-2xl tracking-wide text-ink">Strategy skills</h3>
+        <p class="mt-1 text-sm text-[#6B6759]">Turning business goals into measurable marketing plans.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="border border-ruby/35 px-3 py-1 text-sm text-[#2B2A26]">Budget allocation</span>
+          <span class="border border-ruby/35 px-3 py-1 text-sm text-[#2B2A26]">Sales forecasting</span>
+          <span class="border border-ruby/35 px-3 py-1 text-sm text-[#2B2A26]">Marketing planning</span>
+          <span class="border border-ruby/35 px-3 py-1 text-sm text-[#2B2A26]">Funnel optimization</span>
+          <span class="border border-ruby/35 px-3 py-1 text-sm text-[#2B2A26]">Market research</span>
+          <span class="border border-ruby/35 px-3 py-1 text-sm text-[#2B2A26]">Social media strategy</span>
+          <span class="border border-ruby/35 px-3 py-1 text-sm text-[#2B2A26]">KPI definition (CAC &amp; LTV)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PERFORMANCE MARKETING -->
+    <div class="reveal-on-scroll border border-[#2B2A26]/15 p-6 sm:p-8 grid sm:grid-cols-[4.5rem_1fr] gap-5 sm:gap-8" style="transition-delay:.11s">
+      <div class="flex items-end gap-1 h-11 text-cobalt" aria-hidden="true">
+        <span class="icon-bar w-2 bg-current" style="height:40%; --bar-delay:.05s"></span>
+        <span class="icon-bar w-2 bg-current" style="height:65%; --bar-delay:.15s"></span>
+        <span class="icon-bar w-2 bg-current" style="height:50%; --bar-delay:.25s"></span>
+        <span class="icon-bar w-2 bg-current" style="height:100%; --bar-delay:.35s"></span>
+      </div>
+      <div>
+        <h3 class="font-display text-2xl tracking-wide text-ink">Performance marketing skills</h3>
+        <p class="mt-1 text-sm text-[#6B6759]">Paid media, tested and attributed end to end.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="border border-cobalt/35 px-3 py-1 text-sm text-[#2B2A26]">Paid advertising (Google, Meta &amp; LinkedIn Ads)</span>
+          <span class="border border-cobalt/35 px-3 py-1 text-sm text-[#2B2A26]">Conversion rate optimization (CRO)</span>
+          <span class="border border-cobalt/35 px-3 py-1 text-sm text-[#2B2A26]">Data analytics</span>
+          <span class="border border-cobalt/35 px-3 py-1 text-sm text-[#2B2A26]">Attribution modeling</span>
+        </div>
+
+        <div class="mt-5 pt-5 border-t border-[#2B2A26]/10 grid sm:grid-cols-3 gap-4">
+          <div>
+            <p class="font-mono text-[11px] uppercase tracking-widest text-[#8A8577]">3rd‑party platforms</p>
+            <div class="mt-2 flex flex-wrap gap-1.5">
+              <span class="font-mono text-[11px] border border-[#2B2A26]/15 text-[#4A473F] px-2 py-1">Smartly</span>
+              <span class="font-mono text-[11px] border border-[#2B2A26]/15 text-[#4A473F] px-2 py-1">Triplewhale</span>
+              <span class="font-mono text-[11px] border border-[#2B2A26]/15 text-[#4A473F] px-2 py-1">Umami</span>
+              <span class="font-mono text-[11px] border border-[#2B2A26]/15 text-[#4A473F] px-2 py-1">Adobe Marketing Cloud</span>
+            </div>
+          </div>
+          <div>
+            <p class="font-mono text-[11px] uppercase tracking-widest text-[#8A8577]">Email marketing</p>
+            <div class="mt-2 flex flex-wrap gap-1.5">
+              <span class="font-mono text-[11px] border border-[#2B2A26]/15 text-[#4A473F] px-2 py-1">Mailchimp</span>
+              <span class="font-mono text-[11px] border border-[#2B2A26]/15 text-[#4A473F] px-2 py-1">Klaviyo</span>
+            </div>
+          </div>
+          <div>
+            <p class="font-mono text-[11px] uppercase tracking-widest text-[#8A8577]">AI &amp; content tools</p>
+            <div class="mt-2 flex flex-wrap gap-1.5">
+              <span class="font-mono text-[11px] border border-[#2B2A26]/15 text-[#4A473F] px-2 py-1">Midjourney</span>
+              <span class="font-mono text-[11px] border border-[#2B2A26]/15 text-[#4A473F] px-2 py-1">ChatGPT</span>
+              <span class="font-mono text-[11px] border border-[#2B2A26]/15 text-[#4A473F] px-2 py-1">Adobe Photoshop</span>
+              <span class="font-mono text-[11px] border border-[#2B2A26]/15 text-[#4A473F] px-2 py-1">Adobe Spark</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TECHNICAL TOOLS -->
+    <div class="reveal-on-scroll border border-[#2B2A26]/15 p-6 sm:p-8 grid sm:grid-cols-[4.5rem_1fr] gap-5 sm:gap-8" style="transition-delay:.19s">
+      <div class="icon-draw text-orchid">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 6 L25 12 L31.5 11 L30.5 17.5 L36 21 L30.5 24.5 L31.5 31 L25 30 L22 36 L19 30 L12.5 31 L13.5 24.5 L8 21 L13.5 17.5 L12.5 11 L19 12 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          <circle cx="22" cy="21" r="6" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="font-display text-2xl tracking-wide text-ink">Technical tools</h3>
+        <p class="mt-1 text-sm text-[#6B6759]">The platforms behind planning, buying and testing.</p>
+
+        <div class="mt-4 grid sm:grid-cols-3 gap-5">
+          <div>
+            <p class="font-mono text-[11px] uppercase tracking-widest text-[#8A8577]">Ad platforms</p>
+            <div class="mt-2 flex flex-wrap gap-1.5">
+              <span class="font-mono text-[11px] border border-orchid/35 text-[#2B2A26] px-2 py-1">Google Ads</span>
+              <span class="font-mono text-[11px] border border-orchid/35 text-[#2B2A26] px-2 py-1">Meta Ads Manager</span>
+              <span class="font-mono text-[11px] border border-orchid/35 text-[#2B2A26] px-2 py-1">Instagram Ads</span>
+              <span class="font-mono text-[11px] border border-orchid/35 text-[#2B2A26] px-2 py-1">TikTok Ads</span>
+              <span class="font-mono text-[11px] border border-orchid/35 text-[#2B2A26] px-2 py-1">Snapchat Ads</span>
+              <span class="font-mono text-[11px] border border-orchid/35 text-[#2B2A26] px-2 py-1">LinkedIn Ads</span>
+              <span class="font-mono text-[11px] border border-orchid/35 text-[#2B2A26] px-2 py-1">Pinterest Ads</span>
+              <span class="font-mono text-[11px] border border-orchid/35 text-[#2B2A26] px-2 py-1">Reddit Ads</span>
+            </div>
+          </div>
+          <div>
+            <p class="font-mono text-[11px] uppercase tracking-widest text-[#8A8577]">Analytics tools</p>
+            <div class="mt-2 flex flex-wrap gap-1.5">
+              <span class="font-mono text-[11px] border border-orchid/35 text-[#2B2A26] px-2 py-1">Google Analytics 4 (GA4)</span>
+              <span class="font-mono text-[11px] border border-orchid/35 text-[#2B2A26] px-2 py-1">Looker Studio</span>
+              <span class="font-mono text-[11px] border border-orchid/35 text-[#2B2A26] px-2 py-1">Adobe Experience Manager (AEM)</span>
+              <span class="font-mono text-[11px] border border-orchid/35 text-[#2B2A26] px-2 py-1">Adobe Audience Manager (DMP)</span>
+            </div>
+          </div>
+          <div>
+            <p class="font-mono text-[11px] uppercase tracking-widest text-[#8A8577]">Testing tools</p>
+            <div class="mt-2 flex flex-wrap gap-1.5">
+              <span class="font-mono text-[11px] border border-orchid/35 text-[#2B2A26] px-2 py-1">Optimizely</span>
+              <span class="font-mono text-[11px] border border-orchid/35 text-[#2B2A26] px-2 py-1">VWO</span>
+              <span class="font-mono text-[11px] border border-orchid/35 text-[#2B2A26] px-2 py-1">Adobe Target</span>
+              <span class="font-mono text-[11px] border border-orchid/35 text-[#2B2A26] px-2 py-1">Native platform A/B testing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ RECOMMENDATIONS ============ -->
+<section id="recommendations" class="max-w-5xl mx-auto px-6 py-16">
+  <div class="flex items-baseline justify-between gap-4 flex-wrap">
+    <div>
+      <h2 class="fluid-h2 font-display tracking-wide text-ink">Recommendations</h2>
+      <span class="block w-10 h-[3px] bg-black mt-3"></span>
+    </div>
+    <a href="https://www.linkedin.com/in/alexander-essafi/details/recommendations/" target="_blank" rel="noopener" class="font-mono text-xs uppercase tracking-widest border border-[#2B2A26]/25 px-3 py-1.5 hover:border-ink transition-colors">
+      Read more on LinkedIn ↗
+    </a>
+  </div>
+
+  <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="border border-[#2B2A26]/15 p-6 flex flex-col">
+      <svg width="26" height="20" viewBox="0 0 26 20" fill="none" class="text-ruby mb-3"><path d="M0 20V11.4C0 4.4 4 0.4 10.8 0V4.2C7.2 4.6 5.2 6.6 5.2 10.2H10V20H0ZM15.2 20V11.4C15.2 4.4 19.2 0.4 26 0V4.2C22.4 4.6 20.4 6.6 20.4 10.2H25.2V20H15.2Z" fill="currentColor"/></svg>
+      <p class="text-sm text-[#4A473F] leading-relaxed flex-1">Soufian is a highly creative and competent marketing professional. During the time we have worked together, he has demonstrated great intellectual flexibility and actively contributed to the development of the company and its clients.He is curious and inquisitive, regarding both people and concepts, and is capable of grasping and discussing advanced marketing strategies. I highly recommend Soufian!</p>
+      <div class="mt-4 pt-4 border-t border-[#2B2A26]/10">
+        <p class="font-semibold text-ink text-sm">David Bjärne</p>
+        <p class="font-mono text-xs text-[#8A8577]">Head of Sales & Marketing  Dialog Intelligens</p>
+      </div>
+    </div>
+
+    <div class="border border-[#2B2A26]/15 p-6 flex flex-col">
+      <svg width="26" height="20" viewBox="0 0 26 20" fill="none" class="text-cobalt mb-3"><path d="M0 20V11.4C0 4.4 4 0.4 10.8 0V4.2C7.2 4.6 5.2 6.6 5.2 10.2H10V20H0ZM15.2 20V11.4C15.2 4.4 19.2 0.4 26 0V4.2C22.4 4.6 20.4 6.6 20.4 10.2H25.2V20H15.2Z" fill="currentColor"/></svg>
+      <p class="text-sm text-[#4A473F] leading-relaxed flex-1">I have worked very closely with Soufian for an extended period and can highly recommend him. His work ethic, sense of responsibility, understanding of our needs and processes, and ability to develop the systems we use have been instrumental in helping us become a better company and deliver superior results to our partners. His extensive experience in marketing has repeatedly provided us with valuable insights, ranging from how to handle challenges that arise to identifying opportunities to improve what we do for our partners. Furthermore, our team has grown stronger. Soufian has a knack for fostering a positive team spirit and making everyone feel right at home!
+
+</p>
+      <div class="mt-4 pt-4 border-t border-[#2B2A26]/10">
+        <p class="font-semibold text-ink text-sm">Johannes Johansson</p>
+        <p class="font-mono text-xs text-[#8A8577]">Co-Founder & Partner at WidenMarketing | CMO at NotaryPublic24</p>
+      </div>
+    </div>
+
+    <div class="border border-[#2B2A26]/15 p-6 flex flex-col">
+      <svg width="26" height="20" viewBox="0 0 26 20" fill="none" class="text-orchid mb-3"><path d="M0 20V11.4C0 4.4 4 0.4 10.8 0V4.2C7.2 4.6 5.2 6.6 5.2 10.2H10V20H0ZM15.2 20V11.4C15.2 4.4 19.2 0.4 26 0V4.2C22.4 4.6 20.4 6.6 20.4 10.2H25.2V20H15.2Z" fill="currentColor"/></svg>
+      <p class="text-sm text-[#4A473F] leading-relaxed flex-1">Alex was an very engaged member of our marketing team. His commitment to his role and eagerness to contribute stood out. His strong dedication and enthusiasm were commendable and could serve as significant assets in a dynamic environment. I appreciate his efforts and wish him all the best in his future career endeavors.</p>
+      <div class="mt-4 pt-4 border-t border-[#2B2A26]/10">
+        <p class="font-semibold text-ink text-sm">Niklas Rudemo</p>
+        <p class="font-mono text-xs text-[#8A8577]">Head of Support at Allshares Grow</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ HOBBIES ============ -->
+<section class="max-w-5xl mx-auto px-6 py-14">
+  <h2 class="fluid-h2 font-display tracking-wide text-ink">Outside of work</h2>
+  <span class="block w-10 h-[3px] bg-black mt-3 mb-8"></span>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
+
+    <div class="reveal-on-scroll border border-[#2B2A26]/15 p-5 flex flex-col gap-3" style="transition-delay:.03s">
+      <div class="icon-draw text-ruby">
+        <svg width="38" height="38" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="10" width="32" height="24" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+          <line x1="22" y1="10" x2="22" y2="34" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="22" cy="22" r="5" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </div>
+      <h3 class="font-display text-lg tracking-wide text-ink">Coaching</h3>
+      <p class="text-sm text-[#4A473F] leading-relaxed">Coach for a Senior Women's Division 2 team, leading tactical development, player progression and long‑term squad growth.</p>
+    </div>
+
+    <div class="reveal-on-scroll border border-[#2B2A26]/15 p-5 flex flex-col gap-3" style="transition-delay:.09s">
+      <div class="icon-draw text-cobalt">
+        <svg width="38" height="38" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="15" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M22 13 L27.5 17 L25.5 23.5 L18.5 23.5 L16.5 17 Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3 class="font-display text-lg tracking-wide text-ink">Sports</h3>
+      <p class="text-sm text-[#4A473F] leading-relaxed">Football, badminton and basketball.</p>
+    </div>
+
+    <div class="reveal-on-scroll border border-[#2B2A26]/15 p-5 flex flex-col gap-3" style="transition-delay:.15s">
+      <div class="icon-draw text-orchid">
+        <svg width="38" height="38" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="9" y="9" width="26" height="26" rx="4" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="16" cy="16" r="1.8" fill="currentColor" stroke="none"/>
+          <circle cx="22" cy="22" r="1.8" fill="currentColor" stroke="none"/>
+          <circle cx="28" cy="28" r="1.8" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <h3 class="font-display text-lg tracking-wide text-ink">Gaming</h3>
+      <p class="text-sm text-[#4A473F] leading-relaxed">Board games and PC gaming.</p>
+    </div>
+
+    <div class="reveal-on-scroll border border-[#2B2A26]/15 p-5 flex flex-col gap-3" style="transition-delay:.21s">
+      <div class="icon-draw text-khaki">
+        <svg width="38" height="38" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30 8a7 7 0 0 0-9.6 9.6L10 28l6 6 10.4-10.4A7 7 0 0 0 36 14l-5 5-4-4 5-5a7 7 0 0 0-2-2Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3 class="font-display text-lg tracking-wide text-ink">DIY &amp; building</h3>
+      <p class="text-sm text-[#4A473F] leading-relaxed">Hands‑on construction, repairs and home projects.</p>
+    </div>
+
+    <div class="reveal-on-scroll border border-[#2B2A26]/15 p-5 flex flex-col gap-3" style="transition-delay:.27s">
+      <div class="icon-draw text-amberdim">
+        <svg width="38" height="38" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 8c-8 0-14 6-14 13 0 5 3 8 8 8h2c1 0 2 1 2 2 0 2 2 3 4 3 6 0 12-6 12-13 0-7-6-13-14-13Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          <circle cx="16" cy="19" r="1.6" fill="currentColor" stroke="none"/>
+          <circle cx="22" cy="14" r="1.6" fill="currentColor" stroke="none"/>
+          <circle cx="28" cy="19" r="1.6" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <h3 class="font-display text-lg tracking-wide text-ink">Art</h3>
+      <p class="text-sm text-[#4A473F] leading-relaxed">Painting figurines and miniature models, with a focus on detail and color theory.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ CONTACT FORM / FOOTER ============ -->
+<footer id="contact" class="bg-ink text-[#EDE9DE] py-16 px-6 border-t border-white/10">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+
+    <div>
+      <h2 class="fluid-h2 font-display tracking-wide">Let's talk.</h2>
+      <span class="block w-10 h-[3px] bg-amber mt-3 mb-4"></span>
+      <p class="text-[#9A9585] max-w-md leading-relaxed">Open to digital marketing leadership and project management roles across the Nordics and remote. Fill in the form and it will open a pre‑written email in your mail app, addressed directly to me.</p>
+
+      <div class="mt-8 font-mono text-sm space-y-2 text-[#C9C4B6]">
+        <a href="mailto:s.essafi@gmail.com" class="block hover:text-amber transition-colors">s.essafi@gmail.com</a>
+        <a href="https://www.linkedin.com/in/alexander-essafi" target="_blank" rel="noopener" class="block hover:text-amber transition-colors">linkedin.com/in/alexander-essafi ↗</a>
+      </div>
+    </div>
+
+    <form id="contactForm" class="space-y-6" novalidate>
+      <div class="form-field">
+        <label for="cf-name" class="font-mono text-xs uppercase tracking-widest text-[#8A8577]">Name</label>
+        <input id="cf-name" name="name" type="text" placeholder="Your name" required>
+        <span class="form-underline"></span>
+      </div>
+      <div class="form-field">
+        <label for="cf-email" class="font-mono text-xs uppercase tracking-widest text-[#8A8577]">Your email</label>
+        <input id="cf-email" name="email" type="email" placeholder="you@example.com" required>
+        <span class="form-underline"></span>
+      </div>
+      <div class="form-field">
+        <label for="cf-message" class="font-mono text-xs uppercase tracking-widest text-[#8A8577]">Message</label>
+        <textarea id="cf-message" name="message" placeholder="What would you like to talk about?" required></textarea>
+        <span class="form-underline"></span>
+      </div>
+      <button type="submit" class="font-mono text-xs uppercase tracking-widest border border-amber text-amber px-5 py-2.5 hover:bg-amber hover:text-ink transition-colors">
+        Send message
+      </button>
+      <p id="cf-note" class="text-xs text-[#6B6759]">This opens your email app with the message pre‑filled — hit send there to reach me directly.</p>
+    </form>
+
+  </div>
+  <p class="max-w-5xl mx-auto mt-12 pt-6 border-t border-white/10 font-mono text-[11px] text-[#6B6759]">S Alexander Essafi · Greater Stockholm Metropolitan Area</p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // scroll-reveal for the skills section
+    var revealEls = document.querySelectorAll('.reveal-on-scroll');
+    if ('IntersectionObserver' in window && revealEls.length) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      revealEls.forEach(function (el) { io.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add('revealed'); });
+    }
+
+    // contact form -> mailto (static site, no backend to send mail server-side)
+    var form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name = document.getElementById('cf-name').value.trim();
+        var email = document.getElementById('cf-email').value.trim();
+        var message = document.getElementById('cf-message').value.trim();
+        var subject = encodeURIComponent('Portfolio contact from ' + (name || 'website visitor'));
+        var body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+        var note = document.getElementById('cf-note');
+        note.textContent = 'Opening your email app…';
+        window.location.href = 'mailto:s.essafi@gmail.com?subject=' + subject + '&body=' + body;
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
